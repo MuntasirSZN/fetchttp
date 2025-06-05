@@ -1003,17 +1003,18 @@ mod tests {
     async fn test_body_already_used_error() {
         let response = Response::new(Some(ReadableStream::from_text("test")), None).unwrap();
         let _text = response.text().await.unwrap();
-        
-        let response_with_body = Response::new(Some(ReadableStream::from_text("test")), None).unwrap();
+
+        let response_with_body =
+            Response::new(Some(ReadableStream::from_text("test")), None).unwrap();
         let _consumed = response_with_body.text().await.unwrap();
-        
+
         let response = Response::new(Some(ReadableStream::from_text("test")), None).unwrap();
-        
+
         let cloned = response.clone_response().unwrap();
         assert_eq!(response.status(), cloned.status());
-        
+
         let _text = response.text().await.unwrap();
-        
+
         let _text2 = cloned.text().await.unwrap();
     }
 
