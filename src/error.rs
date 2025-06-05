@@ -14,7 +14,7 @@ use std::fmt;
 /// # Examples
 ///
 /// ```rust
-/// use fetch::TypeError;
+/// use fetchttp::TypeError;
 ///
 /// let error = TypeError::new("Invalid header name");
 /// println!("Error: {}", error);
@@ -54,7 +54,7 @@ impl std::error::Error for TypeError {}
 /// # Examples
 ///
 /// ```rust
-/// use fetch::NetworkError;
+/// use fetchttp::NetworkError;
 ///
 /// let error = NetworkError::new("Connection refused");
 /// println!("Error: {}", error);
@@ -96,7 +96,7 @@ impl std::error::Error for NetworkError {}
 /// # Examples
 ///
 /// ```rust
-/// use fetch::AbortError;
+/// use fetchttp::AbortError;
 ///
 /// let error = AbortError::new("The operation was aborted");
 /// println!("Error: {}", error);
@@ -146,7 +146,7 @@ impl std::error::Error for AbortError {}
 /// # Examples
 ///
 /// ```rust
-/// use fetch::*;
+/// use fetchttp::*;
 ///
 /// async fn handle_fetch_error() {
 ///     match fetch("https://example.com", None).await {
@@ -252,10 +252,10 @@ impl From<serde_json::Error> for FetchError {
 /// # Examples
 ///
 /// ```rust
-/// use fetch::{Result, Response};
+/// use fetchttp::{Result, Response};
 ///
 /// async fn fetch_data() -> Result<Response> {
-///     fetch::fetch("https://api.example.com/data", None).await
+///     fetchttp::fetch("https://api.example.com/data", None).await
 /// }
 /// ```
 pub type Result<T> = std::result::Result<T, FetchError>;

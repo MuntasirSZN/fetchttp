@@ -1,6 +1,6 @@
 //! Performance regression tests
 
-use fetch::*;
+use fetchttp::*;
 use std::time::{Duration, Instant};
 
 #[tokio::test]
@@ -11,7 +11,7 @@ async fn test_headers_performance() {
         let mut headers = Headers::new();
         headers.set("content-type", "application/json").unwrap();
         headers.set("accept", "application/json").unwrap();
-        headers.set("user-agent", "fetch-rs/0.1.0").unwrap();
+        headers.set("user-agent", "fetchttp/0.1.0").unwrap();
 
         let _ = headers.get("content-type").unwrap();
         let _ = headers.has("accept").unwrap();

@@ -1,4 +1,4 @@
-//! # fetch-rs
+//! # fetchttp
 //!
 //! A WHATWG Fetch API compliant HTTP client library for Rust.
 //!
@@ -22,7 +22,7 @@
 //! ### Simple GET Request
 //!
 //! ```rust
-//! use fetch::*;
+//! use fetchttp::*;
 //!
 //! #[tokio::main]
 //! async fn main() -> Result<(), Box<dyn std::error::Error>> {
@@ -40,7 +40,7 @@
 //! ### POST Request with JSON
 //!
 //! ```rust
-//! use fetch::*;
+//! use fetchttp::*;
 //! use serde_json::json;
 //!
 //! #[tokio::main]
@@ -67,7 +67,7 @@
 //! ### Custom Headers
 //!
 //! ```rust
-//! use fetch::*;
+//! use fetchttp::*;
 //!
 //! #[tokio::main]
 //! async fn main() -> Result<(), Box<dyn std::error::Error>> {

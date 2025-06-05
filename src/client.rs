@@ -52,7 +52,7 @@ fn get_client() -> &'static Client<
 /// # Examples
 ///
 /// ```rust
-/// use fetch::*;
+/// use fetchttp::*;
 ///
 /// #[tokio::main]
 /// async fn main() -> Result<(), Box<dyn std::error::Error>> {

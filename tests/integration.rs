@@ -1,6 +1,6 @@
 //! Integration tests with real HTTP server
 
-use fetch::*;
+use fetchttp::*;
 use wiremock::matchers::{body_string, header, method, path};
 use wiremock::{Mock, MockServer, ResponseTemplate};
 
@@ -90,14 +90,14 @@ async fn test_fetch_custom_headers() {
     Mock::given(method("GET"))
         .and(path("/headers"))
         .and(header("x-custom", "test-value"))
-        .and(header("user-agent", "fetch-rs/0.1.0"))
+        .and(header("user-agent", "fetchttp/0.1.0"))
         .respond_with(ResponseTemplate::new(200).set_body_string("OK"))
         .mount(&mock_server)
         .await;
 
     let mut headers = Headers::new();
     headers.set("x-custom", "test-value").unwrap();
-    headers.set("user-agent", "fetch-rs/0.1.0").unwrap();
+    headers.set("user-agent", "fetchttp/0.1.0").unwrap();
 
     let mut init = RequestInit::new();
     init.headers = Some(headers);

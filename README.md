@@ -1,9 +1,9 @@
-# fetch-rs
+# fetchttp
 
-[![Crates.io](https://img.shields.io/crates/v/fetch)](https://crates.io/crates/fetch)
-[![Documentation](https://docs.rs/fetch/badge.svg)](https://docs.rs/fetch)
+[![Crates.io](https://img.shields.io/crates/v/fetchttp)](https://crates.io/crates/fetch)
+[![Documentation](https://docs.rs/fetchttp/badge.svg)](https://docs.rs/fetch)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![CI](https://github.com/MuntasirSZN/fetch-rs/workflows/CI/badge.svg)](https://github.com/MuntasirSZN/fetch-rs/actions)
+[![CI](https://github.com/MuntasirSZN/fetchttp/workflows/test/badge.svg)](https://github.com/MuntasirSZN/fetchttp/actions)
 
 A **WHATWG Fetch API** compliant HTTP client library for Rust that provides the familiar `fetch()` interface you know and love from web development.
 
@@ -21,11 +21,11 @@ A **WHATWG Fetch API** compliant HTTP client library for Rust that provides the 
 
 ## 🚀 Quick Start
 
-Add `fetch` to your `Cargo.toml`:
+Add `fetchttp` to your `Cargo.toml`:
 
 ```toml
 [dependencies]
-fetch = "0.1.0"
+fetchttp = "0.1.0"
 tokio = { version = "1.0", features = ["full"] }
 serde_json = "1.0"  # For JSON support
 ```
@@ -33,7 +33,7 @@ serde_json = "1.0"  # For JSON support
 ### Simple GET Request
 
 ```rust
-use fetch::*;
+use fetchttp::*;
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
@@ -51,7 +51,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
 ### POST Request with JSON
 
 ```rust
-use fetch::*;
+use fetchttp::*;
 use serde_json::json;
 
 #[tokio::main]
@@ -78,7 +78,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
 ### Custom Headers
 
 ```rust
-use fetch::*;
+use fetchttp::*;
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
@@ -100,7 +100,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
 ### Request Cancellation
 
 ```rust
-use fetch::*;
+use fetchttp::*;
 use std::time::Duration;
 use tokio::time::sleep;
 
@@ -287,7 +287,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🌟 Comparison with Other Libraries
 
-| Feature | fetch-rs | reqwest | hyper | ureq |
+| Feature | fetchttp | reqwest | hyper | ureq |
 |---------|----------|---------|-------|------|
 | WHATWG Fetch API | ✅ | ❌ | ❌ | ❌ |
 | Async/Await | ✅ | ✅ | ✅ | ❌ |
@@ -298,9 +298,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🔗 Links
 
-- [Documentation](https://docs.rs/fetch)
-- [Repository](https://github.com/MuntasirSZN/fetch-rs)
-- [Issues](https://github.com/MuntasirSZN/fetch-rs/issues)
+- [Documentation](https://docs.rs/fetchttp)
+- [Repository](https://github.com/MuntasirSZN/fetchttp)
+- [Issues](https://github.com/MuntasirSZN/fetchttp/issues)
 - [WHATWG Fetch Specification](https://fetch.spec.whatwg.org/)
 
 ---

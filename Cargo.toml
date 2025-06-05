@@ -1,11 +1,11 @@
 [package]
-name = "fetch"
+name = "fetchttp"
 version = "0.1.0"
 edition = "2021"
 description = "`fetch` Web API Implementation In Rust!"
 license = "MIT"
 authors = ["MuntasirSZN <muntasir.joypurhat@gmail.com>"]
-repository = "https://github.com/MuntasirSZN/fetch-rs"
+repository = "https://github.com/MuntasirSZN/fetchttp"
 documentation = "https://docs.rs/fetch"
 readme = "README.md"
 keywords = ["fetch", "http", "client"]

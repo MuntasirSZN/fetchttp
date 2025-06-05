@@ -15,7 +15,7 @@
 //! # Usage Examples
 //!
 //! ```rust
-//! use fetch::ReadableStream;
+//! use fetchttp::ReadableStream;
 //! use serde_json::json;
 //!
 //! // Create different body types
@@ -68,7 +68,7 @@ pub enum BodySource {
 /// # Examples
 ///
 /// ```rust
-/// use fetch::ReadableStream;
+/// use fetchttp::ReadableStream;
 ///
 /// # tokio_test::block_on(async {
 /// // Create and consume a text body
@@ -97,7 +97,7 @@ impl ReadableStream {
     /// # Examples
     ///
     /// ```rust
-    /// use fetch::ReadableStream;
+    /// use fetchttp::ReadableStream;
     ///
     /// let stream = ReadableStream::empty();
     /// # tokio_test::block_on(async {
@@ -123,7 +123,7 @@ impl ReadableStream {
     /// # Examples
     ///
     /// ```rust
-    /// use fetch::ReadableStream;
+    /// use fetchttp::ReadableStream;
     ///
     /// let stream = ReadableStream::from_text("Hello, World!");
     /// # tokio_test::block_on(async {
@@ -147,7 +147,7 @@ impl ReadableStream {
     /// # Examples
     ///
     /// ```rust
-    /// use fetch::ReadableStream;
+    /// use fetchttp::ReadableStream;
     /// use bytes::Bytes;
     ///
     /// let data = Bytes::from(b"binary data".to_vec());
@@ -176,7 +176,7 @@ impl ReadableStream {
     /// # Examples
     ///
     /// ```rust
-    /// use fetch::ReadableStream;
+    /// use fetchttp::ReadableStream;
     /// use serde_json::json;
     ///
     /// let data = json!({"name": "Alice", "age": 25});
@@ -205,7 +205,7 @@ impl ReadableStream {
     /// # Examples
     ///
     /// ```rust
-    /// use fetch::ReadableStream;
+    /// use fetchttp::ReadableStream;
     ///
     /// let stream = ReadableStream::from_text("test");
     /// assert!(!stream.locked());
@@ -231,7 +231,7 @@ impl ReadableStream {
     /// # Examples
     ///
     /// ```rust
-    /// use fetch::ReadableStream;
+    /// use fetchttp::ReadableStream;
     ///
     /// # tokio_test::block_on(async {
     /// let stream = ReadableStream::from_text("Hello");
@@ -267,7 +267,7 @@ impl ReadableStream {
     /// # Examples
     ///
     /// ```rust
-    /// use fetch::ReadableStream;
+    /// use fetchttp::ReadableStream;
     ///
     /// # tokio_test::block_on(async {
     /// let stream = ReadableStream::from_bytes(b"data".to_vec().into());
@@ -290,7 +290,7 @@ impl ReadableStream {
     /// # Examples
     ///
     /// ```rust
-    /// use fetch::ReadableStream;
+    /// use fetchttp::ReadableStream;
     ///
     /// # tokio_test::block_on(async {
     /// let stream = ReadableStream::from_text("key=value&foo=bar");
@@ -323,7 +323,7 @@ impl ReadableStream {
     /// # Examples
     ///
     /// ```rust
-    /// use fetch::ReadableStream;
+    /// use fetchttp::ReadableStream;
     /// use serde_json::json;
     /// use serde::Deserialize;
     ///
@@ -375,7 +375,7 @@ impl ReadableStream {
     /// # Examples
     ///
     /// ```rust
-    /// use fetch::ReadableStream;
+    /// use fetchttp::ReadableStream;
     ///
     /// # tokio_test::block_on(async {
     /// let stream = ReadableStream::from_text("Hello, World!");
@@ -412,7 +412,7 @@ impl ReadableStream {
     /// # Examples
     ///
     /// ```rust
-    /// use fetch::ReadableStream;
+    /// use fetchttp::ReadableStream;
     /// use serde_json::json;
     ///
     /// let text_body = ReadableStream::from_text("hello");
@@ -458,7 +458,7 @@ impl ReadableStream {
     /// # Examples
     ///
     /// ```rust
-    /// use fetch::ReadableStream;
+    /// use fetchttp::ReadableStream;
     ///
     /// # tokio_test::block_on(async {
     /// let stream = ReadableStream::from_text("test");

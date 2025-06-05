@@ -1,6 +1,6 @@
-# Contributing to fetch-rs
+# Contributing to fetchttp
 
-Thank you for considering contributing to fetch-rs! This document provides guidelines for contributing to the project.
+Thank you for considering contributing to fetchttp! This document provides guidelines for contributing to the project.
 
 ## 🚀 Getting Started
 
@@ -14,8 +14,8 @@ Thank you for considering contributing to fetch-rs! This document provides guide
 
 1. **Fork and Clone**
    ```bash
-   git clone https://github.com/your-username/fetch-rs.git
-   cd fetch-rs
+   git clone https://github.com/MuntasirSZN/fetchttp.git
+   cd fetchttp
    ```
 
 2. **Install Dependencies**
@@ -64,8 +64,7 @@ type(scope): description
 - `refactor`: Code refactoring
 - `test`: Test additions/modifications
 - `chore`: Maintenance tasks
-
-**Examples:**
+MuntasirSZN*
 ```bash
 feat(headers): add support for custom header validation
 fix(client): handle connection timeout properly
@@ -169,7 +168,7 @@ mod tests {
 /// # Examples
 /// 
 /// ```rust
-/// use fetch::*;
+/// use fetchttp::*;
 /// 
 /// let result = function_name("example").unwrap();
 /// assert_eq!(result, "expected");
@@ -254,7 +253,7 @@ What actually happened.
 **Environment**
 - OS: [e.g. Windows 10, macOS 11, Ubuntu 20.04]
 - Rust Version: [e.g. 1.70.0]
-- fetch-rs Version: [e.g. 0.1.0]
+- fetchttp Version: [e.g. 0.1.0]
 
 **Additional Context**
 Any other context about the problem.
@@ -412,4 +411,4 @@ Contributors will be recognized in:
 - Release notes
 - Project documentation
 
-Thank you for contributing to fetch-rs! 🎉
+Thank you for contributing to fetchttp! 🎉

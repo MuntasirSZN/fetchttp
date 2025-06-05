@@ -9,7 +9,7 @@
 //! ## Basic Abort Controller
 //!
 //! ```rust
-//! use fetch::*;
+//! use fetchttp::*;
 //! use std::time::Duration;
 //! use tokio::time::sleep;
 //!
@@ -40,7 +40,7 @@
 //! ## Pre-aborted Signal
 //!
 //! ```rust
-//! use fetch::AbortSignal;
+//! use fetchttp::AbortSignal;
 //!
 //! // Create a signal that is already aborted
 //! let signal = AbortSignal::abort(Some("Operation cancelled".to_string()));
@@ -68,7 +68,7 @@ use std::sync::{Arc, Mutex};
 /// # Examples
 ///
 /// ```rust
-/// use fetch::{AbortController, AbortSignal};
+/// use fetchttp::{AbortController, AbortSignal};
 ///
 /// // Create through controller
 /// let controller = AbortController::new();
@@ -112,7 +112,7 @@ impl AbortSignal {
     /// # Examples
     ///
     /// ```rust
-    /// use fetch::AbortSignal;
+    /// use fetchttp::AbortSignal;
     ///
     /// let signal = AbortSignal::new();
     /// assert!(!signal.aborted());
@@ -139,7 +139,7 @@ impl AbortSignal {
     /// # Examples
     ///
     /// ```rust
-    /// use fetch::AbortSignal;
+    /// use fetchttp::AbortSignal;
     ///
     /// let signal = AbortSignal::abort(Some("Timeout".to_string()));
     /// assert!(signal.aborted());
@@ -170,7 +170,7 @@ impl AbortSignal {
     /// # Examples
     ///
     /// ```rust
-    /// use fetch::AbortController;
+    /// use fetchttp::AbortController;
     ///
     /// let controller = AbortController::new();
     /// let signal = controller.signal();
@@ -196,7 +196,7 @@ impl AbortSignal {
     /// # Examples
     ///
     /// ```rust
-    /// use fetch::AbortSignal;
+    /// use fetchttp::AbortSignal;
     ///
     /// let signal = AbortSignal::abort(Some("User cancelled".to_string()));
     /// assert_eq!(signal.reason().unwrap(), "User cancelled");
@@ -248,7 +248,7 @@ impl Default for AbortSignal {
 /// # Examples
 ///
 /// ```rust
-/// use fetch::AbortController;
+/// use fetchttp::AbortController;
 ///
 /// let controller = AbortController::new();
 /// let signal = controller.signal().clone();
@@ -277,7 +277,7 @@ impl AbortController {
     /// # Examples
     ///
     /// ```rust
-    /// use fetch::AbortController;
+    /// use fetchttp::AbortController;
     ///
     /// let controller = AbortController::new();
     /// assert!(!controller.signal().aborted());
@@ -300,7 +300,7 @@ impl AbortController {
     /// # Examples
     ///
     /// ```rust
-    /// use fetch::AbortController;
+    /// use fetchttp::AbortController;
     ///
     /// let controller = AbortController::new();
     /// let signal1 = controller.signal().clone();
@@ -323,7 +323,7 @@ impl AbortController {
     /// # Examples
     ///
     /// ```rust
-    /// use fetch::AbortController;
+    /// use fetchttp::AbortController;
     ///
     /// let controller = AbortController::new();
     /// let signal = controller.signal();

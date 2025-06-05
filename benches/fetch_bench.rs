@@ -1,7 +1,7 @@
 //! Criterion benchmarks for fetch operations
 
 use criterion::{criterion_group, criterion_main, BenchmarkId, Criterion};
-use fetch::*;
+use fetchttp::*;
 use std::hint::black_box;
 use std::time::Duration;
 use tokio::runtime::Runtime;
@@ -69,7 +69,7 @@ fn bench_headers_operations(c: &mut Criterion) {
             let mut headers = Headers::new();
             headers.set("content-type", "application/json").unwrap();
             headers.set("accept", "application/json").unwrap();
-            headers.set("user-agent", "fetch-rs/0.1.0").unwrap();
+            headers.set("user-agent", "fetchttp/0.1.0").unwrap();
             headers.set("authorization", "Bearer token").unwrap();
             headers.set("x-custom", "value").unwrap();
             black_box(())
@@ -184,7 +184,7 @@ fn bench_request_creation(c: &mut Criterion) {
             let mut headers = Headers::new();
             headers.set("content-type", "application/json").unwrap();
             headers.set("accept", "application/json").unwrap();
-            headers.set("user-agent", "fetch-rs/0.1.0").unwrap();
+            headers.set("user-agent", "fetchttp/0.1.0").unwrap();
 
             let mut init = RequestInit::new();
             init.method = Some("POST".to_string());

@@ -16,7 +16,7 @@ use std::collections::HashMap;
 /// # Examples
 ///
 /// ```rust
-/// use fetch::Headers;
+/// use fetchttp::Headers;
 ///
 /// let mut headers = Headers::new();
 /// headers.set("Content-Type", "application/json").unwrap();
@@ -42,7 +42,7 @@ impl Headers {
     /// # Examples
     ///
     /// ```rust
-    /// use fetch::Headers;
+    /// use fetchttp::Headers;
     ///
     /// let headers = Headers::new();
     /// assert_eq!(headers.keys().count(), 0);
@@ -68,7 +68,7 @@ impl Headers {
     /// # Examples
     ///
     /// ```rust
-    /// use fetch::Headers;
+    /// use fetchttp::Headers;
     ///
     /// let mut headers = Headers::new();
     /// headers.set("Accept", "application/json").unwrap();
@@ -107,7 +107,7 @@ impl Headers {
     /// # Examples
     ///
     /// ```rust
-    /// use fetch::Headers;
+    /// use fetchttp::Headers;
     ///
     /// let mut headers = Headers::new();
     /// headers.set("Content-Type", "application/json").unwrap();
@@ -142,7 +142,7 @@ impl Headers {
     /// # Examples
     ///
     /// ```rust
-    /// use fetch::Headers;
+    /// use fetchttp::Headers;
     ///
     /// let mut headers = Headers::new();
     /// headers.set("Content-Type", "application/json").unwrap();
@@ -169,7 +169,7 @@ impl Headers {
     /// # Examples
     ///
     /// ```rust
-    /// use fetch::Headers;
+    /// use fetchttp::Headers;
     ///
     /// let mut headers = Headers::new();
     /// headers.set("Set-Cookie", "session=abc123, secure=true").unwrap();
@@ -199,7 +199,7 @@ impl Headers {
     /// # Examples
     ///
     /// ```rust
-    /// use fetch::Headers;
+    /// use fetchttp::Headers;
     ///
     /// let mut headers = Headers::new();
     /// headers.set("Content-Type", "application/json").unwrap();
@@ -229,7 +229,7 @@ impl Headers {
     /// # Examples
     ///
     /// ```rust
-    /// use fetch::Headers;
+    /// use fetchttp::Headers;
     ///
     /// let mut headers = Headers::new();
     /// headers.set("Content-Type", "application/json").unwrap();
@@ -251,7 +251,7 @@ impl Headers {
     /// # Examples
     ///
     /// ```rust
-    /// use fetch::Headers;
+    /// use fetchttp::Headers;
     ///
     /// let mut headers = Headers::new();
     /// headers.set("Content-Type", "application/json").unwrap();
@@ -270,7 +270,7 @@ impl Headers {
     /// # Examples
     ///
     /// ```rust
-    /// use fetch::Headers;
+    /// use fetchttp::Headers;
     ///
     /// let mut headers = Headers::new();
     /// headers.set("Content-Type", "application/json").unwrap();
@@ -288,7 +288,7 @@ impl Headers {
     /// # Examples
     ///
     /// ```rust
-    /// use fetch::Headers;
+    /// use fetchttp::Headers;
     ///
     /// let mut headers = Headers::new();
     /// headers.set("Content-Type", "application/json").unwrap();

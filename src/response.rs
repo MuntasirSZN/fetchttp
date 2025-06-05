@@ -19,7 +19,7 @@
 //! ## Basic Response Handling
 //!
 //! ```rust
-//! use fetch::*;
+//! use fetchttp::*;
 //!
 //! # async fn example() -> Result<(), Box<dyn std::error::Error>> {
 //! let response = fetch("https://httpbin.org/json", None).await?;
@@ -38,7 +38,7 @@
 //! ## Creating Custom Responses
 //!
 //! ```rust
-//! use fetch::{Response, ResponseInit, ReadableStream, Headers};
+//! use fetchttp::{Response, ResponseInit, ReadableStream, Headers};
 //!
 //! // Simple response
 //! let response = Response::new(
@@ -98,7 +98,7 @@ impl Default for ResponseType {
 /// # Examples
 ///
 /// ```rust
-/// use fetch::{ResponseInit, Headers};
+/// use fetchttp::{ResponseInit, Headers};
 ///
 /// let mut headers = Headers::new();
 /// headers.set("X-Custom-Header", "value").unwrap();
@@ -126,7 +126,7 @@ impl ResponseInit {
     /// # Examples
     ///
     /// ```rust
-    /// use fetch::ResponseInit;
+    /// use fetchttp::ResponseInit;
     ///
     /// let init = ResponseInit::new();
     /// assert!(init.status.is_none());
@@ -157,7 +157,7 @@ impl ResponseInit {
 /// # Examples
 ///
 /// ```rust
-/// use fetch::{Response, ReadableStream};
+/// use fetchttp::{Response, ReadableStream};
 ///
 /// # tokio_test::block_on(async {
 /// let response = Response::new(
@@ -212,7 +212,7 @@ impl Response {
     /// # Examples
     ///
     /// ```rust
-    /// use fetch::{Response, ResponseInit, ReadableStream};
+    /// use fetchttp::{Response, ResponseInit, ReadableStream};
     ///
     /// // Simple 200 OK response
     /// let response = Response::new(
@@ -278,7 +278,7 @@ impl Response {
     /// # Examples
     ///
     /// ```rust
-    /// use fetch::{Response, ResponseType};
+    /// use fetchttp::{Response, ResponseType};
     ///
     /// let response = Response::error();
     /// assert_eq!(response.status(), 0);
@@ -318,7 +318,7 @@ impl Response {
     /// # Examples
     ///
     /// ```rust
-    /// use fetch::Response;
+    /// use fetchttp::Response;
     ///
     /// // Temporary redirect (302)
     /// let response = Response::redirect("https://example.com/new", None).unwrap();
@@ -362,7 +362,7 @@ impl Response {
     /// # Examples
     ///
     /// ```rust
-    /// use fetch::{Response, ResponseType};
+    /// use fetchttp::{Response, ResponseType};
     ///
     /// let response = Response::new(None, None).unwrap();
     /// assert_eq!(response.response_type(), ResponseType::Basic);
@@ -381,7 +381,7 @@ impl Response {
     /// # Examples
     ///
     /// ```rust
-    /// use fetch::Response;
+    /// use fetchttp::Response;
     ///
     /// let response = Response::new(None, None).unwrap();
     /// assert_eq!(response.url(), "");
@@ -395,7 +395,7 @@ impl Response {
     /// # Examples
     ///
     /// ```rust
-    /// use fetch::Response;
+    /// use fetchttp::Response;
     ///
     /// let response = Response::new(None, None).unwrap();
     /// assert!(!response.redirected());
@@ -409,7 +409,7 @@ impl Response {
     /// # Examples
     ///
     /// ```rust
-    /// use fetch::{Response, ResponseInit};
+    /// use fetchttp::{Response, ResponseInit};
     ///
     /// let response = Response::new(None, None).unwrap();
     /// assert_eq!(response.status(), 200);
@@ -430,7 +430,7 @@ impl Response {
     /// # Examples
     ///
     /// ```rust
-    /// use fetch::{Response, ResponseInit};
+    /// use fetchttp::{Response, ResponseInit};
     ///
     /// // 2xx status codes are ok
     /// let response = Response::new(None, None).unwrap(); // 200
@@ -459,7 +459,7 @@ impl Response {
     /// # Examples
     ///
     /// ```rust
-    /// use fetch::{Response, ResponseInit};
+    /// use fetchttp::{Response, ResponseInit};
     ///
     /// let response = Response::new(None, None).unwrap();
     /// assert_eq!(response.status_text(), "OK");
@@ -478,7 +478,7 @@ impl Response {
     /// # Examples
     ///
     /// ```rust
-    /// use fetch::{Response, ResponseInit, Headers};
+    /// use fetchttp::{Response, ResponseInit, Headers};
     ///
     /// let mut headers = Headers::new();
     /// headers.set("Content-Type", "application/json").unwrap();
@@ -498,7 +498,7 @@ impl Response {
     /// # Examples
     ///
     /// ```rust
-    /// use fetch::{Response, ReadableStream};
+    /// use fetchttp::{Response, ReadableStream};
     ///
     /// // Response without body
     /// let response = Response::new(None, None).unwrap();
@@ -520,7 +520,7 @@ impl Response {
     /// # Examples
     ///
     /// ```rust
-    /// use fetch::{Response, ReadableStream};
+    /// use fetchttp::{Response, ReadableStream};
     ///
     /// let response = Response::new(
     ///     Some(ReadableStream::from_text("content")),
@@ -551,7 +551,7 @@ impl Response {
     /// # Examples
     ///
     /// ```rust
-    /// use fetch::Response;
+    /// use fetchttp::Response;
     ///
     /// let response = Response::new(None, None).unwrap();
     /// let cloned = response.clone_response().unwrap();
@@ -573,7 +573,7 @@ impl Response {
     /// # Examples
     ///
     /// ```rust
-    /// use fetch::{Response, ReadableStream};
+    /// use fetchttp::{Response, ReadableStream};
     ///
     /// # tokio_test::block_on(async {
     /// let response = Response::new(
@@ -610,7 +610,7 @@ impl Response {
     /// # Examples
     ///
     /// ```rust
-    /// use fetch::{Response, ReadableStream};
+    /// use fetchttp::{Response, ReadableStream};
     /// use serde_json::json;
     ///
     /// # tokio_test::block_on(async {
@@ -639,7 +639,7 @@ impl Response {
     /// # Examples
     ///
     /// ```rust
-    /// use fetch::{Response, ReadableStream};
+    /// use fetchttp::{Response, ReadableStream};
     ///
     /// # tokio_test::block_on(async {
     /// let response = Response::new(

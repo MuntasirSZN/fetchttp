@@ -1,6 +1,6 @@
 //! IAI-Callgrind benchmarks for instruction counting and cache analysis
 
-use fetch::*;
+use fetchttp::*;
 use iai_callgrind::{
     library_benchmark, library_benchmark_group, main, EventKind, FlamegraphConfig,
     LibraryBenchmarkConfig, RegressionConfig, Tool, ValgrindTool,
@@ -23,7 +23,7 @@ fn headers_set_multiple() -> Headers {
     let mut headers = Headers::new();
     headers.set("content-type", "application/json").unwrap();
     headers.set("accept", "application/json").unwrap();
-    headers.set("user-agent", "fetch-rs/0.1.0").unwrap();
+    headers.set("user-agent", "fetchttp/0.1.0").unwrap();
     headers.set("authorization", "Bearer token").unwrap();
     headers.set("x-custom", "value").unwrap();
     headers
@@ -124,7 +124,7 @@ fn request_create_full_init() -> Request {
     let mut headers = Headers::new();
     headers.set("content-type", "application/json").unwrap();
     headers.set("accept", "application/json").unwrap();
-    headers.set("user-agent", "fetch-rs/0.1.0").unwrap();
+    headers.set("user-agent", "fetchttp/0.1.0").unwrap();
     headers.set("authorization", "Bearer token").unwrap();
 
     let mut init = RequestInit::new();

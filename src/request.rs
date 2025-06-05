@@ -15,7 +15,7 @@
 //! ## Simple GET Request
 //!
 //! ```rust
-//! use fetch::Request;
+//! use fetchttp::Request;
 //!
 //! let request = Request::new("https://api.example.com/users", None).unwrap();
 //! assert_eq!(request.method(), "GET");
@@ -25,7 +25,7 @@
 //! ## POST Request with JSON Body
 //!
 //! ```rust
-//! use fetch::{Request, RequestInit, ReadableStream};
+//! use fetchttp::{Request, RequestInit, ReadableStream};
 //! use serde_json::json;
 //!
 //! let data = json!({"name": "John", "email": "john@example.com"});
@@ -42,7 +42,7 @@
 //! ## Request with Custom Headers
 //!
 //! ```rust
-//! use fetch::{Request, RequestInit, Headers};
+//! use fetchttp::{Request, RequestInit, Headers};
 //!
 //! let mut headers = Headers::new();
 //! headers.set("Authorization", "Bearer token123").unwrap();
@@ -153,7 +153,7 @@ impl Default for RequestRedirect {
 /// # Examples
 ///
 /// ```rust
-/// use fetch::{RequestInit, ReadableStream, Headers, RequestMode};
+/// use fetchttp::{RequestInit, ReadableStream, Headers, RequestMode};
 ///
 /// let mut init = RequestInit::new();
 /// init.method = Some("PUT".to_string());
@@ -201,7 +201,7 @@ impl RequestInit {
     /// # Examples
     ///
     /// ```rust
-    /// use fetch::RequestInit;
+    /// use fetchttp::RequestInit;
     ///
     /// let init = RequestInit::new();
     /// assert!(init.method.is_none());
@@ -228,7 +228,7 @@ impl RequestInit {
 /// # Examples
 ///
 /// ```rust
-/// use fetch::{Request, RequestInit};
+/// use fetchttp::{Request, RequestInit};
 ///
 /// // Simple GET request
 /// let request = Request::new("https://api.example.com/data", None).unwrap();
@@ -295,7 +295,7 @@ impl Request {
     /// # Examples
     ///
     /// ```rust
-    /// use fetch::{Request, RequestInit, ReadableStream};
+    /// use fetchttp::{Request, RequestInit, ReadableStream};
     ///
     /// // Simple GET request
     /// let request = Request::new("https://example.com", None).unwrap();
@@ -372,7 +372,7 @@ impl Request {
     /// # Examples
     ///
     /// ```rust
-    /// use fetch::Request;
+    /// use fetchttp::Request;
     ///
     /// let request = Request::new("https://api.example.com/users?page=1", None).unwrap();
     /// assert_eq!(request.url(), "https://api.example.com/users?page=1");
@@ -390,7 +390,7 @@ impl Request {
     /// # Examples
     ///
     /// ```rust
-    /// use fetch::{Request, RequestInit};
+    /// use fetchttp::{Request, RequestInit};
     ///
     /// let request = Request::new("https://example.com", None).unwrap();
     /// assert_eq!(request.method(), "GET");
@@ -413,7 +413,7 @@ impl Request {
     /// # Examples
     ///
     /// ```rust
-    /// use fetch::{Request, RequestInit, Headers};
+    /// use fetchttp::{Request, RequestInit, Headers};
     ///
     /// let mut headers = Headers::new();
     /// headers.set("User-Agent", "MyApp/1.0").unwrap();
@@ -437,7 +437,7 @@ impl Request {
     /// # Examples
     ///
     /// ```rust
-    /// use fetch::{Request, RequestInit, ReadableStream};
+    /// use fetchttp::{Request, RequestInit, ReadableStream};
     ///
     /// // Request without body
     /// let request = Request::new("https://example.com", None).unwrap();
@@ -464,7 +464,7 @@ impl Request {
     /// # Examples
     ///
     /// ```rust
-    /// use fetch::{Request, RequestInit, ReadableStream};
+    /// use fetchttp::{Request, RequestInit, ReadableStream};
     ///
     /// let mut init = RequestInit::new();
     /// init.method = Some("POST".to_string());
@@ -485,7 +485,7 @@ impl Request {
     /// # Examples
     ///
     /// ```rust
-    /// use fetch::{Request, RequestMode};
+    /// use fetchttp::{Request, RequestMode};
     ///
     /// let request = Request::new("https://example.com", None).unwrap();
     /// assert_eq!(request.mode(), RequestMode::Cors);
@@ -499,7 +499,7 @@ impl Request {
     /// # Examples
     ///
     /// ```rust
-    /// use fetch::{Request, RequestCredentials};
+    /// use fetchttp::{Request, RequestCredentials};
     ///
     /// let request = Request::new("https://example.com", None).unwrap();
     /// assert_eq!(request.credentials(), RequestCredentials::SameOrigin);
@@ -513,7 +513,7 @@ impl Request {
     /// # Examples
     ///
     /// ```rust
-    /// use fetch::{Request, RequestCache};
+    /// use fetchttp::{Request, RequestCache};
     ///
     /// let request = Request::new("https://example.com", None).unwrap();
     /// assert_eq!(request.cache(), RequestCache::Default);
@@ -527,7 +527,7 @@ impl Request {
     /// # Examples
     ///
     /// ```rust
-    /// use fetch::{Request, RequestRedirect};
+    /// use fetchttp::{Request, RequestRedirect};
     ///
     /// let request = Request::new("https://example.com", None).unwrap();
     /// assert_eq!(request.redirect(), RequestRedirect::Follow);
@@ -541,7 +541,7 @@ impl Request {
     /// # Examples
     ///
     /// ```rust
-    /// use fetch::Request;
+    /// use fetchttp::Request;
     ///
     /// let request = Request::new("https://example.com", None).unwrap();
     /// assert_eq!(request.referrer(), "about:client");
@@ -560,7 +560,7 @@ impl Request {
     /// # Examples
     ///
     /// ```rust
-    /// use fetch::Request;
+    /// use fetchttp::Request;
     ///
     /// let request = Request::new("https://example.com", None).unwrap();
     /// assert_eq!(request.integrity(), "");
@@ -574,7 +574,7 @@ impl Request {
     /// # Examples
     ///
     /// ```rust
-    /// use fetch::Request;
+    /// use fetchttp::Request;
     ///
     /// let request = Request::new("https://example.com", None).unwrap();
     /// assert!(!request.keepalive());
@@ -592,7 +592,7 @@ impl Request {
     /// # Examples
     ///
     /// ```rust
-    /// use fetch::{Request, RequestInit, AbortController};
+    /// use fetchttp::{Request, RequestInit, AbortController};
     ///
     /// let controller = AbortController::new();
     /// let mut init = RequestInit::new();
@@ -621,7 +621,7 @@ impl Request {
     /// # Examples
     ///
     /// ```rust
-    /// use fetch::Request;
+    /// use fetchttp::Request;
     ///
     /// let request = Request::new("https://example.com", None).unwrap();
     /// let cloned = request.clone_request().unwrap();
@@ -643,7 +643,7 @@ impl Request {
     /// # Examples
     ///
     /// ```rust
-    /// use fetch::{Request, RequestInit, ReadableStream};
+    /// use fetchttp::{Request, RequestInit, ReadableStream};
     ///
     /// # tokio_test::block_on(async {
     /// let mut init = RequestInit::new();
@@ -680,7 +680,7 @@ impl Request {
     /// # Examples
     ///
     /// ```rust
-    /// use fetch::{Request, RequestInit, ReadableStream};
+    /// use fetchttp::{Request, RequestInit, ReadableStream};
     /// use serde_json::json;
     ///
     /// # tokio_test::block_on(async {
@@ -709,7 +709,7 @@ impl Request {
     /// # Examples
     ///
     /// ```rust
-    /// use fetch::{Request, RequestInit, ReadableStream};
+    /// use fetchttp::{Request, RequestInit, ReadableStream};
     ///
     /// # tokio_test::block_on(async {
     /// let mut init = RequestInit::new();
