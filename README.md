@@ -25,7 +25,7 @@ Add `fetchttp` to your `Cargo.toml`:
 
 ```toml
 [dependencies]
-fetchttp = "0.1.0"
+fetchttp = "1.0.0"
 tokio = { version = "1.0", features = ["full"] }
 serde_json = "1.0"  # For JSON support
 ```
