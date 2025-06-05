@@ -3,7 +3,7 @@
 [![Crates.io](https://img.shields.io/crates/v/fetchttp)](https://crates.io/crates/fetch)
 [![Documentation](https://docs.rs/fetchttp/badge.svg)](https://docs.rs/fetch)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![CI](https://github.com/MuntasirSZN/fetchttp/workflows/test/badge.svg)](https://github.com/MuntasirSZN/fetchttp/actions)
+[![CI](https://github.com/MuntasirSZN/fetchttp/actions/workflows/test.yml/badge.svg)](https://github.com/MuntasirSZN/fetchttp/actions/workflows/test.yml)
 
 A **WHATWG Fetch API** compliant HTTP client library for Rust that provides the familiar `fetch()` interface you know and love from web development.
 
