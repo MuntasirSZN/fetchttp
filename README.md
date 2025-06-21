@@ -1,7 +1,7 @@
 # fetchttp
 
-[![Crates.io](https://img.shields.io/crates/v/fetchttp)](https://crates.io/crates/fetch)
-[![Documentation](https://docs.rs/fetchttp/badge.svg)](https://docs.rs/fetch)
+[![Crates.io](https://img.shields.io/crates/v/fetchttp)](https://crates.io/crates/fetchttp)
+[![Documentation](https://docs.rs/fetchttp/badge.svg)](https://docs.rs/fetchttp)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![CI](https://github.com/MuntasirSZN/fetchttp/actions/workflows/test.yml/badge.svg)](https://github.com/MuntasirSZN/fetchttp/actions/workflows/test.yml)
 
