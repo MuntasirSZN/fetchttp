@@ -17,7 +17,7 @@ bytes = "1.0"
 url = "2.5"
 serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
-tokio = { version = "1.47", features = ["rt", "time", "macros"], default-features = false }
+tokio = { version = "1.48", features = ["rt", "time", "macros"], default-features = false }
 hyper = { version = "1.7", features = ["client", "http1", "http2"], default-features = false }
 hyper-util = { version = "0.1", features = ["client", "client-legacy", "http1", "http2", "tokio"], default-features = false }
 hyper-tls = { version = "0.6", default-features = false }
