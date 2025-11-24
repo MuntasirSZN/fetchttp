@@ -12,7 +12,7 @@ keywords = ["fetch", "http", "client"]
 categories = ["web-programming::http-client", "api-bindings"]
 
 [dependencies]
-http = "1.0"
+http = "1.4"
 bytes = "1.11"
 url = "2.5"
 serde = { version = "1.0", features = ["derive"] }
