@@ -28,7 +28,7 @@ wiremock = "0.6"
 criterion = { version = "0.8.1", features = ["html_reports", "async_tokio"] }
 iai-callgrind = "0.16.1"
 futures = "0.3"
-cargo-nextest = "0.9.122"
+cargo-nextest = "0.9.124"
 tokio-test = "0.4"
 
 [[bench]]
